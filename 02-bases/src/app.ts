@@ -6,14 +6,14 @@
 // const {getPokemonById} = require('./js-foundation/06-promises.js')
 // const { buildLogger } = require('./plugins')
 
-import { getPokemonNameById } from "./js-foundation/06-promises";
-import { buildLogger } from "./plugins/logger.plugin";
+// import { getPokemonNameById } from "./js-foundation/06-promises";
+// import { buildLogger } from "./plugins/logger.plugin";
 
-const logger = buildLogger('app.js')
+// const logger = buildLogger('app.js')
 
-getPokemonNameById(3).then((name) => {
-  console.log(name)
-})
+// getPokemonNameById(3).then((name) => {
+//   console.log(name)
+// })
 
-logger.log('Hola mundo')
-logger.error('Esto es algo malo')
+// logger.log('Hola mundo')
+// logger.error('Esto es algo malo')

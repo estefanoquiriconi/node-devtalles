@@ -7,7 +7,7 @@ const {SHELL, USER} = process.env;
 // console.table({SHELL, USER});
 
 
-const characters = ['luke', 'leia', 'han solo', 'break', 'chewbacca'];
+export const characters = ['luke', 'leia', 'han solo', 'break', 'chewbacca'];
 
 
 const [luke, leia] = characters;
