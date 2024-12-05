@@ -2,12 +2,9 @@ import winston, { format } from 'winston'
 
 const { combine, timestamp, json } = winston.format
 
-const logger = winston.createLogger({
+export const logger = winston.createLogger({
   level: 'info',
-  format: combine(
-    timestamp(),
-    json()
-  ),
+  format: combine(timestamp(), json()),
   // defaultMeta: { service: 'user-service' },
   transports: [
     new winston.transports.File({ filename: 'error.log', level: 'error' }),
@@ -15,9 +12,11 @@ const logger = winston.createLogger({
   ],
 })
 
-logger.add(new winston.transports.Console({
-  format: winston.format.simple(),
-}))
+logger.add(
+  new winston.transports.Console({
+    format: winston.format.simple(),
+  })
+)
 
 export const buildLogger = (service: string) => {
   return {
@@ -26,6 +25,6 @@ export const buildLogger = (service: string) => {
     },
     error: (message: string) => {
       logger.error('error', { message, service })
-    }
+    },
   }
 }

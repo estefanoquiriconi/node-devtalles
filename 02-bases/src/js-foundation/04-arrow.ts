@@ -1,8 +1,8 @@
 interface User {
-  id: number;
-  name: string;
-  age: number;
-  country: string;
+  id: number
+  name: string
+  age: number
+  country: string
 }
 
 const users: User[] = [
@@ -10,17 +10,20 @@ const users: User[] = [
     id: 1,
     name: 'Estéfano',
     age: 30,
-    country: 'AR'
+    country: 'AR',
   },
   {
     id: 2,
     name: 'Juan',
     age: 25,
-    country: 'MX'
-  }
+    country: 'MX',
+  },
 ]
 
-export const getUserById = (id: number, callback: (err?: string, user?: User) => void) => {
+export const getUserById = (
+  id: number,
+  callback: (err?: string, user?: User) => void
+) => {
   const user = users.find((user) => user.id === id)
 
   if (!user) {

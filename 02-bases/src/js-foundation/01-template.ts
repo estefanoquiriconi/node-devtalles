@@ -4,4 +4,4 @@ export const emailTemplate = `
     <p>Welcome to the platform</p>
     <p>Your order id is {{orderId}}</p>
 </div>
-`;
+`
