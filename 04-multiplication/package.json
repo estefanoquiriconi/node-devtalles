@@ -1,0 +1,36 @@
+{
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "include": [
+    "src/**/*"
+  ],
+  "name": "04-multiplication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --exec ts-node ./src/app.ts",
+    "dev:watch": "tsx watch ./src/app.ts",
+    "dev:nodemon": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "pnpm build && node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@types/yargs": "^17.0.33",
+    "nodemon": "^3.1.7",
+    "yargs": "^17.7.2"
+  }
+}
