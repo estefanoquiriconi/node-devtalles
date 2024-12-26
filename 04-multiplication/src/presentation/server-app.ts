@@ -24,9 +24,7 @@ export class ServerApp {
       fileName,
     })
 
-    if (showTable) {
-      console.log(table)
-    }
+    if (showTable) console.log(table)
 
     wasCreated
       ? console.log('File created successfully')
