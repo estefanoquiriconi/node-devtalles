@@ -1,0 +1,10 @@
+1. ¿Qué es Node.js?
+Node.js es un entorno que permite ejecutar código JavaScript fuera del navegador. Es ideal para construir aplicaciones web, servicios API y sistemas en tiempo real.
+
+2. ¿Por qué elegir Node.js?
+    - Asíncrono y basado en eventos: perfecto para manejar múltiples solicitudes simultáneas.
+    - Rápido: usa el motor V8, optimizado para rendimiento.
+    - Ecosistema amplio: NPM (Node Package Manager) ofrece una enorme cantidad de librerías.
+
+3. ¿Cómo difiere de otros entornos de servidor?
+Node.js usa un modelo de entrada/salida no bloqueante, lo que significa que las operaciones de red o de disco no detienen el flujo del programa.

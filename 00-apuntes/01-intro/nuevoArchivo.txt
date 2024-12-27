@@ -1,0 +1,2 @@
+Node.js incluye el módulo fs para interactuar con el sistema de archivos. 
+Este módulo soporta operaciones tanto sincrónicas como asíncronas.
