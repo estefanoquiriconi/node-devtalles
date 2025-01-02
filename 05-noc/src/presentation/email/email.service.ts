@@ -1,6 +1,5 @@
 import nodemailder from 'nodemailer'
 import { envs } from '../../config/plugins/envs.plugin'
-import { LogEntity, LogSeverityLevel } from '../../domain/entities/log.entity'
 
 interface SendMailOptions {
   to: string | string[]
@@ -9,7 +8,10 @@ interface SendMailOptions {
   attachments: Attachement[]
 }
 
-interface Attachement {}
+interface Attachement {
+  filename: string
+  path: string
+}
 
 const { MAILER_SERVICE, MAILER_EMAIL, MAILER_SECRET_KEY } = envs
 
