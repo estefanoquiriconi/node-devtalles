@@ -6,16 +6,11 @@ El objetivo es crear una serie de tareas usando Arquitectura Limpia con Typescri
 
 1. Crear el archivo .env a partir de .env.template
 2. Configurar las variables de entorno
+3. Ejecutar el comando `npm install`
+4. Levantar las bases de datos con el comando
 
-```env
-PORT=3000
-
-MAILER_EMAIL=estefanoquiriconi@gmail.com
-MAILER_SECRET_KEY=123
-
-PROD=true
+```
+ docker compose up -d
 ```
 
-3 Ejecutar el comando ```npm install```
-
-4 Ejecutar ``npm run dev```
+5. Ejecutar ``npm run dev```
