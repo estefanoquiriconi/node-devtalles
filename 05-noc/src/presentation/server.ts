@@ -19,13 +19,13 @@ export class Server {
   public static async start() {
     console.log('Server started...')
 
-    // const url = 'http://google.com'
-    // CronService.createJob('*/5 * * * * * ', () => {
-    //   new CheckServiceMultiple(
-    //     [fsLogRepository, mongoLogRepository, postgreLogRepository],
-    //     () => console.log(`${url} is ok`),
-    //     (error) => console.error(error)
-    //   ).execute(url)
-    // })
+    const url = 'http://google.com'
+    CronService.createJob('*/5 * * * * * ', () => {
+      new CheckServiceMultiple(
+        [fsLogRepository, mongoLogRepository, postgreLogRepository],
+        () => console.log(`${url} is ok`),
+        (error) => console.error(error)
+      ).execute(url)
+    })
   }
 }

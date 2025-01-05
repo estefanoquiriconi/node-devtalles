@@ -17,6 +17,7 @@ El objetivo es crear una serie de tareas usando Arquitectura Limpia con Typescri
 
 ```
 npx prisma migrate dev
+npx prisma generate
 ```
 
 5. Ejecutar ``npm run dev```

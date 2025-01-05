@@ -2,16 +2,14 @@ import { envs } from './envs.plugin'
 
 describe('envs.plugin.test.ts', () => {
   test('should return env options', () => {
-    console.log(envs)
-
     expect(envs).toEqual({
       PORT: 3000,
       MAILER_SERVICE: 'gmail',
       MAILER_EMAIL: 'estefanoquiriconi@gmail.com',
-      MAILER_SECRET_KEY: '123123123',
+      MAILER_SECRET_KEY: '123123123123',
       PROD: true,
       MONGO_URL: 'mongodb://estefano:123456789@localhost:27017/',
-      MONGO_DB_NAME: 'NOC_TEST',
+      MONGO_DB_NAME: 'NOC-TEST',
       MONGO_USER: 'estefano',
       MONGO_PASS: '123456789',
     })
