@@ -32,7 +32,7 @@ export class LogEntity {
     const log = new LogEntity({
       message,
       level,
-      createAt,
+      createAt: new Date(createAt),
       origin,
     })
 
