@@ -5,7 +5,7 @@ interface SendMailOptions {
   to: string | string[]
   subject: string
   html: string
-  attachments: Attachement[]
+  attachments?: Attachement[]
 }
 
 interface Attachement {
@@ -16,8 +16,6 @@ interface Attachement {
 const { MAILER_SERVICE, MAILER_EMAIL, MAILER_SECRET_KEY } = envs
 
 export class EmailService {
-  constructor() {}
-
   private transporter = nodemailder.createTransport({
     service: MAILER_SERVICE,
     auth: {
@@ -25,6 +23,8 @@ export class EmailService {
       pass: MAILER_SECRET_KEY,
     },
   })
+
+  constructor() {}
 
   async sendEmail(options: SendMailOptions): Promise<Boolean> {
     const { to, subject, html, attachments = [] } = options
@@ -37,7 +37,7 @@ export class EmailService {
         attachments,
       })
 
-      console.log(sendInformation)
+      // console.log(sendInformation)
       return true
     } catch (error) {
       return false
@@ -62,7 +62,7 @@ export class EmailService {
       { filename: 'logs-medium.log', path: './logs/logs-medium.log' },
     ]
 
-    this.sendEmail({
+    return this.sendEmail({
       to,
       subject,
       html,
