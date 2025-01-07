@@ -1,4 +1,3 @@
-import { CheckService } from '../domain/use-cases/checks/check-service'
 import { CheckServiceMultiple } from '../domain/use-cases/checks/check-service-multiple'
 import { FileSystemDatasource } from '../infrastructure/datasources/file-system.datasource'
 import { MongoLogDatasource } from '../infrastructure/datasources/mongo-log.datasource'
