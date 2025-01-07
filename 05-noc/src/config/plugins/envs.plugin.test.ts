@@ -6,7 +6,7 @@ describe('envs.plugin.test.ts', () => {
       PORT: 3000,
       MAILER_SERVICE: 'gmail',
       MAILER_EMAIL: 'estefanoquiriconi@gmail.com',
-      MAILER_SECRET_KEY: '123123123123',
+      MAILER_SECRET_KEY: 'secret',
       PROD: true,
       MONGO_URL: 'mongodb://estefano:123456789@localhost:27018/',
       MONGO_DB_NAME: 'NOC-TEST',
