@@ -21,8 +21,8 @@ export class AuthController {
 
     this.authService
       .loginUser(loginUserDto!)
-      .then((user) => res.json(user))
-      .catch((error) => this.handleError(error, res));
+      .then(user => res.json(user))
+      .catch(error => this.handleError(error, res));
   };
 
   registerUser = (req: Request, res: Response) => {
@@ -31,11 +31,16 @@ export class AuthController {
 
     this.authService
       .registerUser(registerDto!)
-      .then((user) => res.json(user))
-      .catch((error) => this.handleError(error, res));
+      .then(user => res.json(user))
+      .catch(error => this.handleError(error, res));
   };
 
   validatedEmail = (req: Request, res: Response) => {
-    res.json('ValidatedEmail');
+    const { token } = req.params;
+
+    this.authService
+      .validateEmail(token)
+      .then(() => res.json('Email was validated properly'))
+      .catch(error => this.handleError(error, res));
   };
 }
