@@ -12,7 +12,7 @@ export class AuthController {
       return res.status(error.statusCode).json({ error: error.message });
     }
     console.error(`${error}`);
-    res.status(500).json({ error: 'Internal server error' });
+    return res.status(500).json({ error: 'Internal server error' });
   };
 
   loginUser = (req: Request, res: Response) => {
